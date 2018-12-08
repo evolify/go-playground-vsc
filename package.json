@@ -1,0 +1,38 @@
+{
+    "name": "go-playground",
+    "displayName": "go-playground",
+    "description": "Go playground in vscode.",
+    "publisher":"evolify",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/evolify/go-playground-vsc"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:go"
+    ],
+    "main": "./out/extension",
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "yarn run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "tslint": "^5.8.0",
+        "typescript": "^3.1.4",
+        "vscode": "^1.1.25"
+    },
+    "dependencies": {
+        "axios": "^0.18.0"
+    }
+}
